@@ -143,7 +143,6 @@
 ### Backend
 
 * ASP.NET
-* ASP.NET Web Forms / MVC
 * C#
 
 ### Database
