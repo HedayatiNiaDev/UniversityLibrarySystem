@@ -1,0 +1,1084 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.4.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.4.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5AA736BA-D09A-4EA3-B781-48F4B8B4C100}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UniversityLibrarySystem</RootNamespace>
+    <AssemblyName>UniversityLibrarySystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BotDetect, Version=4.4.2.0, Culture=neutral, PublicKeyToken=74616036388b765f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Captcha.4.4.2\lib\net35\BotDetect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.2\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="RestSharp, Version=112.1.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.112.1.0\lib\net471\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.2\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.2\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=9.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Z.EntityFramework.Extensions, Version=9.103.7.2, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.EntityFramework.Extensions.9.103.7.2\lib\net45\Z.EntityFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Z.Expressions.Eval, Version=6.2.8.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Expressions.Eval.6.2.8\lib\net45\Z.Expressions.Eval.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountDeactivated.aspx" />
+    <Content Include="BookDetail.aspx" />
+    <Content Include="Categories.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Dash.aspx" />
+    <Content Include="ForgetPassword.aspx" />
+    <Content Include="img\bg\login-bg.png" />
+    <Content Include="img\books\no-photo.png" />
+    <Content Include="img\categories\no-photo.png" />
+    <Content Include="img\Error\no-photo.png" />
+    <Content Include="img\users\no-photo.png" />
+    <Content Include="img\users\user.png" />
+    <Content Include="img\users\zero.png" />
+    <Content Include="js\jquery-3.6.0.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="MainModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MainModel.edmx</DependentUpon>
+      <LastGenOutput>MainModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MainModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MainModel.edmx</DependentUpon>
+      <LastGenOutput>MainModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Manager\Books.ascx" />
+    <Content Include="Manager\Categories.ascx" />
+    <Content Include="Manager\ChangePassword.ascx" />
+    <Content Include="Manager\Dashboard.ascx" />
+    <Content Include="Manager\Faqs.ascx" />
+    <Content Include="Manager\LoginReport.ascx" />
+    <Content Include="Manager\Manager.ascx" />
+    <Content Include="Manager\Permission.ascx" />
+    <Content Include="Manager\Profile.ascx" />
+    <Content Include="Manager\Reservations.ascx" />
+    <Content Include="Manager\ServerMonitor.ascx" />
+    <Content Include="Manager\Students.ascx" />
+    <Content Include="Manager\SystemSettings.ascx" />
+    <Content Include="PAPAssets\css\font-awesome.css" />
+    <Content Include="PAPAssets\js\headTitle.js" />
+    <Content Include="PAPAssets\Pages\AccessDenied.ascx" />
+    <Content Include="PAPAssets\Pages\CompileError.ascx" />
+    <Content Include="Manager\Default.aspx" />
+    <Content Include="PAPAssets\Pages\NotFoundPage.ascx" />
+    <Content Include="packages.config" />
+    <Content Include="Main.Master" />
+    <Content Include="img\icon\primary-check.png.webp" />
+    <Content Include="img\logo\logo.webp" />
+    <Content Include="fonts\fa-brands-400.ttf" />
+    <Content Include="fonts\fa-brands-400.woff2" />
+    <Content Include="fonts\fa-regular-400.ttf" />
+    <Content Include="fonts\fa-regular-400.woff2" />
+    <Content Include="fonts\fa-solid-900.ttf" />
+    <Content Include="fonts\fa-solid-900.woff2" />
+    <Content Include="fonts\fa-v4compatibility.ttf" />
+    <Content Include="fonts\fa-v4compatibility.woff2" />
+    <Content Include="fonts\Iransans\eot\IRANSansWeb%28FaNum%29.eot" />
+    <Content Include="fonts\Iransans\eot\IRANSansWeb%28FaNum%29_Black.eot" />
+    <Content Include="fonts\Iransans\eot\IRANSansWeb%28FaNum%29_Bold.eot" />
+    <Content Include="fonts\Iransans\eot\IRANSansWeb%28FaNum%29_Light.eot" />
+    <Content Include="fonts\Iransans\eot\IRANSansWeb%28FaNum%29_Medium.eot" />
+    <Content Include="fonts\Iransans\eot\IRANSansWeb%28FaNum%29_UltraLight.eot" />
+    <Content Include="fonts\Iransans\ttf\IRANSansWeb%28FaNum%29.ttf" />
+    <Content Include="fonts\Iransans\ttf\IRANSansWeb%28FaNum%29_Black.ttf" />
+    <Content Include="fonts\Iransans\ttf\IRANSansWeb%28FaNum%29_Bold.ttf" />
+    <Content Include="fonts\Iransans\ttf\IRANSansWeb%28FaNum%29_Light.ttf" />
+    <Content Include="fonts\Iransans\ttf\IRANSansWeb%28FaNum%29_Medium.ttf" />
+    <Content Include="fonts\Iransans\ttf\IRANSansWeb%28FaNum%29_UltraLight.ttf" />
+    <Content Include="fonts\Iransans\woff2\IRANSansWeb%28FaNum%29.woff2" />
+    <Content Include="fonts\Iransans\woff2\IRANSansWeb%28FaNum%29_Black.woff2" />
+    <Content Include="fonts\Iransans\woff2\IRANSansWeb%28FaNum%29_Bold.woff2" />
+    <Content Include="fonts\Iransans\woff2\IRANSansWeb%28FaNum%29_Light.woff2" />
+    <Content Include="fonts\Iransans\woff2\IRANSansWeb%28FaNum%29_Medium.woff2" />
+    <Content Include="fonts\Iransans\woff2\IRANSansWeb%28FaNum%29_UltraLight.woff2" />
+    <Content Include="fonts\Iransans\woff\IRANSansWeb%28FaNum%29.woff" />
+    <Content Include="fonts\Iransans\woff\IRANSansWeb%28FaNum%29_Black.woff" />
+    <Content Include="fonts\Iransans\woff\IRANSansWeb%28FaNum%29_Bold.woff" />
+    <Content Include="fonts\Iransans\woff\IRANSansWeb%28FaNum%29_Light.woff" />
+    <Content Include="fonts\Iransans\woff\IRANSansWeb%28FaNum%29_Medium.woff" />
+    <Content Include="fonts\Iransans\woff\IRANSansWeb%28FaNum%29_UltraLight.woff" />
+    <Content Include="fonts\themify.eot" />
+    <Content Include="fonts\themify.ttf" />
+    <Content Include="fonts\themify.woff" />
+    <Content Include="js\contact_process.php" />
+    <EntityDeploy Include="MainModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MainModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="MainModel.edmx.diagram">
+      <DependentUpon>MainModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="PAPAssets\dist\dropzone.js.map" />
+    <Content Include="PAPAssets\map\dist\assets\fonts\en\IRANSansWeb_Medium.woff" />
+    <Content Include="PAPAssets\map\dist\assets\fonts\en\IRANSansWeb_Medium.woff2" />
+    <Content Include="PAPAssets\map\dist\assets\fonts\fa\IRANSansWeb_Medium.woff" />
+    <Content Include="PAPAssets\map\dist\assets\fonts\fa\IRANSansWeb_Medium.woff2" />
+    <Content Include="PAPAssets\map\dist\assets\languages\en.json" />
+    <Content Include="PAPAssets\map\dist\assets\languages\fa.json" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-grid.css.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap.css.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap.min.css.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.js.map" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.min.js.map" />
+    <Content Include="Manager\web.config" />
+    <Content Include="Register.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <Content Include="ServerCommand.aspx" />
+    <Content Include="Student\Books.ascx" />
+    <Content Include="Student\ChangePassword.ascx" />
+    <Content Include="Student\LoginReport.ascx" />
+    <Content Include="Student\Profile.ascx" />
+    <Content Include="Student\web.config" />
+    <Content Include="PAPAssets\json\ajax.php" />
+    <Content Include="PAPAssets\json\invoice-list.json" />
+    <Content Include="PAPAssets\json\jstree-data.json" />
+    <Content Include="PAPAssets\json\locales\de.json" />
+    <Content Include="PAPAssets\json\locales\en.json" />
+    <Content Include="PAPAssets\json\locales\fa.json" />
+    <Content Include="PAPAssets\json\locales\fr.json" />
+    <Content Include="PAPAssets\json\locales\pt.json" />
+    <Content Include="PAPAssets\json\permissions-list.json" />
+    <Content Include="PAPAssets\json\projects-list.json" />
+    <Content Include="PAPAssets\json\search-horizontal.json" />
+    <Content Include="PAPAssets\json\search-vertical.json" />
+    <Content Include="PAPAssets\json\table-datatable.json" />
+    <Content Include="PAPAssets\json\table-ecommerce.json" />
+    <Content Include="PAPAssets\json\typeahead-data-2.json" />
+    <Content Include="PAPAssets\json\typeahead.json" />
+    <Content Include="PAPAssets\json\user-list.json" />
+    <Content Include="PAPAssets\json\user-profile.json" />
+    <Content Include="content\net40\Web.config" />
+    <Content Include="PAPAssets\web.config" />
+    <Fakes Include="Fakes\BotDetect.fakes" />
+    <Fakes Include="Fakes\EntityFramework.fakes" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="about.aspx" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\fontawesome-all.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\nouislider.min.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\slick.css" />
+    <Content Include="css\slicknav.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\themify-icons.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="faq.aspx" />
+    <Content Include="fonts\themify.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\books\author-book-1.jpg" />
+    <Content Include="img\books\author-book-2.jpg" />
+    <Content Include="img\books\author-book-3.jpg" />
+    <Content Include="img\books\author-book-4.jpg" />
+    <Content Include="img\books\author-book-5.jpg" />
+    <Content Include="img\books\author-book-6.jpg" />
+    <Content Include="img\books\author-book-7.jpg" />
+    <Content Include="img\books\best-books1-details.jpg" />
+    <Content Include="img\books\best-books1.jpg" />
+    <Content Include="img\books\best-books2.jpg" />
+    <Content Include="img\books\best_selling1.jpg" />
+    <Content Include="img\books\best_selling2.jpg" />
+    <Content Include="img\books\best_selling3.jpg" />
+    <Content Include="img\books\best_selling4.jpg" />
+    <Content Include="img\books\best_selling5.jpg" />
+    <Content Include="img\books\best_selling6.jpg" />
+    <Content Include="img\books\best_selling7.jpg" />
+    <Content Include="img\books\best_selling8.jpg" />
+    <Content Include="img\books\best_selling9.jpg" />
+    <Content Include="img\books\nasher.jpg" />
+    <Content Include="img\categories\amozeshi.jpg" />
+    <Content Include="img\categories\dastani.jpg" />
+    <Content Include="img\categories\kasbokar.jpg" />
+    <Content Include="img\categories\mazhabi.jpg" />
+    <Content Include="img\categories\music.jpg" />
+    <Content Include="img\categories\pezeshki.jpg" />
+    <Content Include="img\categories\ravanshenasi.jpg" />
+    <Content Include="img\categories\siasi.jpg" />
+    <Content Include="img\categories\tarikhi.jpg" />
+    <Content Include="img\categories\varzeshi.jpg" />
+    <Content Include="img\icon\book-open-reader-solid.svg" />
+    <Content Include="img\icon\cart.svg" />
+    <Content Include="img\icon\disabled-check.png" />
+    <Content Include="img\icon\disabled-radio.png" />
+    <Content Include="img\icon\primary-radio.png" />
+    <Content Include="img\icon\success-check.png" />
+    <Content Include="img\icon\success-radio.png" />
+    <Content Include="img\logo\favicon.png" />
+    <Content Include="img\logo\logo.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\countdown.js" />
+    <Content Include="js\jquery-1.12.4.min.js" />
+    <Content Include="js\jquery.ajaxchimp.min.js" />
+    <Content Include="js\jquery.countdown.min.js" />
+    <Content Include="js\jquery.countdownTimer.js" />
+    <Content Include="js\jquery.counterup.min.js" />
+    <Content Include="js\jquery.form.js" />
+    <Content Include="js\jquery.magnific-popup.js" />
+    <Content Include="js\jquery.nice-select.min.js" />
+    <Content Include="js\jquery.slicknav.min.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\mail-script.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\modernizr-3.5.0.min.js" />
+    <Content Include="js\nouislider.min.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\price_rangs.js" />
+    <Content Include="js\slick.min.js" />
+    <Content Include="js\waypoints.min.js" />
+    <Content Include="js\wow.min.js" />
+    <Content Include="PAPAssets\css\demo.css" />
+    <Content Include="PAPAssets\css\lightbox.min.css" />
+    <Content Include="PAPAssets\css\PersianDatePicker.min.css" />
+    <Content Include="PAPAssets\css\sweetalert2.min.css" />
+    <Content Include="PAPAssets\dist\basic.css" />
+    <Content Include="PAPAssets\dist\dropzone-amd-module.js" />
+    <Content Include="PAPAssets\dist\dropzone.css" />
+    <Content Include="PAPAssets\dist\dropzone.js" />
+    <Content Include="PAPAssets\dist\min\basic.min.css" />
+    <Content Include="PAPAssets\dist\min\dropzone-amd-module.min.js" />
+    <Content Include="PAPAssets\dist\min\dropzone.min.css" />
+    <Content Include="PAPAssets\dist\min\dropzone.min.js" />
+    <Content Include="PAPAssets\js\app-access-permission.js" />
+    <Content Include="PAPAssets\js\app-access-roles.js" />
+    <Content Include="PAPAssets\js\app-calendar-events.js" />
+    <Content Include="PAPAssets\js\app-calendar.js" />
+    <Content Include="PAPAssets\js\app-invoice-add.js" />
+    <Content Include="PAPAssets\js\app-invoice-edit.js" />
+    <Content Include="PAPAssets\js\app-invoice-list.js" />
+    <Content Include="PAPAssets\js\app-invoice-print.js" />
+    <Content Include="PAPAssets\js\app-user-list.js" />
+    <Content Include="PAPAssets\js\app-user-view-account.js" />
+    <Content Include="PAPAssets\js\app-user-view-billing.js" />
+    <Content Include="PAPAssets\js\app-user-view-security.js" />
+    <Content Include="PAPAssets\js\app-user-view.js" />
+    <Content Include="PAPAssets\js\cards-actions.js" />
+    <Content Include="PAPAssets\js\cards-advance.js" />
+    <Content Include="PAPAssets\js\cards-analytics.js" />
+    <Content Include="PAPAssets\js\cards-statistics.js" />
+    <Content Include="PAPAssets\js\Chart.min.js" />
+    <Content Include="PAPAssets\js\charts-apex.js" />
+    <Content Include="PAPAssets\js\charts-chartjs.js" />
+    <Content Include="PAPAssets\js\config.js" />
+    <Content Include="PAPAssets\js\dashboards-analytics.js" />
+    <Content Include="PAPAssets\js\dashboards-ecommerce.js" />
+    <Content Include="PAPAssets\js\extended-ui-blockui.js" />
+    <Content Include="PAPAssets\js\extended-ui-drag-and-drop.js" />
+    <Content Include="PAPAssets\js\extended-ui-media-player.js" />
+    <Content Include="PAPAssets\js\extended-ui-misc-clipboardjs.js" />
+    <Content Include="PAPAssets\js\extended-ui-misc-idle-timer.js" />
+    <Content Include="PAPAssets\js\extended-ui-misc-numeraljs.js" />
+    <Content Include="PAPAssets\js\extended-ui-perfect-scrollbar.js" />
+    <Content Include="PAPAssets\js\extended-ui-star-ratings.js" />
+    <Content Include="PAPAssets\js\extended-ui-sweetalert2.js" />
+    <Content Include="PAPAssets\js\extended-ui-timeline.js" />
+    <Content Include="PAPAssets\js\extended-ui-tour.js" />
+    <Content Include="PAPAssets\js\extended-ui-treeview.js" />
+    <Content Include="PAPAssets\js\form-basic-inputs.js" />
+    <Content Include="PAPAssets\js\form-layouts.js" />
+    <Content Include="PAPAssets\js\form-validation.js" />
+    <Content Include="PAPAssets\js\form-wizard-icons.js" />
+    <Content Include="PAPAssets\js\form-wizard-numbered.js" />
+    <Content Include="PAPAssets\js\form-wizard-validation.js" />
+    <Content Include="PAPAssets\js\forms-editors.js" />
+    <Content Include="PAPAssets\js\forms-extras.js" />
+    <Content Include="PAPAssets\js\forms-file-upload.js" />
+    <Content Include="PAPAssets\js\forms-pickers.js" />
+    <Content Include="PAPAssets\js\forms-selects.js" />
+    <Content Include="PAPAssets\js\forms-sliders.js" />
+    <Content Include="PAPAssets\js\forms-tagify.js" />
+    <Content Include="PAPAssets\js\forms-typeahead.js" />
+    <Content Include="PAPAssets\js\lightbox-plus-jquery.min.js" />
+    <Content Include="PAPAssets\js\main.js" />
+    <Content Include="PAPAssets\js\maps-leaflet.js" />
+    <Content Include="PAPAssets\js\modal-add-new-address.js" />
+    <Content Include="PAPAssets\js\modal-add-new-cc.js" />
+    <Content Include="PAPAssets\js\modal-add-permission.js" />
+    <Content Include="PAPAssets\js\modal-add-role.js" />
+    <Content Include="PAPAssets\js\modal-edit-cc.js" />
+    <Content Include="PAPAssets\js\modal-edit-permission.js" />
+    <Content Include="PAPAssets\js\modal-edit-user.js" />
+    <Content Include="PAPAssets\js\modal-enable-otp.js" />
+    <Content Include="PAPAssets\js\NavMenuItem.js" />
+    <Content Include="PAPAssets\js\offcanvas-add-payment.js" />
+    <Content Include="PAPAssets\js\offcanvas-send-invoice.js" />
+    <Content Include="PAPAssets\js\pages-account-settings-account.js" />
+    <Content Include="PAPAssets\js\pages-account-settings-billing.js" />
+    <Content Include="PAPAssets\js\pages-account-settings-security.js" />
+    <Content Include="PAPAssets\js\pages-auth-multisteps.js" />
+    <Content Include="PAPAssets\js\pages-auth-two-steps.js" />
+    <Content Include="PAPAssets\js\pages-auth.js" />
+    <Content Include="PAPAssets\js\pages-pricing.js" />
+    <Content Include="PAPAssets\js\pages-profile.js" />
+    <Content Include="PAPAssets\js\PersianDatePicker.js" />
+    <Content Include="PAPAssets\js\sweetalert2.all.min.js" />
+    <Content Include="PAPAssets\js\tables-datatables-advanced.js" />
+    <Content Include="PAPAssets\js\tables-datatables-basic.js" />
+    <Content Include="PAPAssets\js\tables-datatables-extensions.js" />
+    <Content Include="PAPAssets\js\ui-app-brand.js" />
+    <Content Include="PAPAssets\js\ui-carousel.js" />
+    <Content Include="PAPAssets\js\ui-menu.js" />
+    <Content Include="PAPAssets\js\ui-modals.js" />
+    <Content Include="PAPAssets\js\ui-navbar.js" />
+    <Content Include="PAPAssets\js\ui-popover.js" />
+    <Content Include="PAPAssets\js\ui-toasts.js" />
+    <Content Include="PAPAssets\js\WebSiteJs.js" />
+    <Content Include="PAPAssets\js\wizard-ex-checkout.js" />
+    <Content Include="PAPAssets\js\wizard-ex-create-deal.js" />
+    <Content Include="PAPAssets\js\wizard-ex-property-listing.js" />
+    <Content Include="PAPAssets\map\app\css\app.css" />
+    <Content Include="PAPAssets\map\app\js\app.js" />
+    <Content Include="PAPAssets\map\dist\assets\images\custom-logo.png" />
+    <Content Include="PAPAssets\map\dist\assets\images\favicons\favicon-32x32.png" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-android.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-apple.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-area.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-bank.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-bookmark.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-cafe.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-clear.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-close-2.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-close.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-copy-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-copy.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-default-autocomplete.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-delete.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-disabled.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-distance.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-down-double.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-down.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-drugstore.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-edit.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-enabled.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-end-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-end.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-fullscreen-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-fullscreen.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-gas-station.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-geolocation-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-geolocation.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-get.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-hospital.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-hotel.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-info.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-inspect.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-layers-2.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-layers-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-layers.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-library.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-locale.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-login.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-mall.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-map.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-marker-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-marker.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-menu-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-menu.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-metro.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-mosque.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-options.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-parking.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-placeholder-primary.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-placeholder.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-polygon-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-polygon.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-polyline-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-polyline.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-print.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-restaurant.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-reverse-geocode-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-reverse-geocode.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-road.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-routing-2.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-routing-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-routing.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-share-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-share.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-start-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-start.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-tag.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-ticket.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-toggle.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-university.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-up.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-uploader-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-uploader.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-01d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-01n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-02d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-02n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-03d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-03n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-04d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-04n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-09d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-09n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-10d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-10n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-11d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-11n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-13d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-13n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-50d.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather-50n.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-weather.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-zoom-in-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-zoom-in.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-zoom-out-light.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\icon-zoom-out.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\loader.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\mapp-logo.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\mapp-path-finder.png" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-bank.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-cafe.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-circle-white.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-default-blue.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-default-green.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-default-red.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-drugstore.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-end-route.png" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-gas-station.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-hospital.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-hotel.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-icon.png" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-library.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-mall.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-metro.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-mosque.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-parking.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-restaurant.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-start-route.png" />
+    <Content Include="PAPAssets\map\dist\assets\images\marker-university.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\placeholder-1.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\placeholder-2.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-attraction.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-bakery.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-bank.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-barbers.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-beverage.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-bicycle-shop.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-bus.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-cafe.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-cake.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-car-wash.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-chemist.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-cinema.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-cloths.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-computer.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-courthouse.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-dentist.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-department-store.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-fastfood.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-florist.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-footway.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-furniture.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-gas-station.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-gym.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-hospital.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-hotel.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-jeweller.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-kindergarten.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-laundry.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-leather.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-library.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-living-street.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-market.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-metro.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-mosque.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-motorway.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-neighbourhood.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-park.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-parking.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-pharmacy.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-police.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-post.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-primary.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-raceway.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-repair.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-residential.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-restaurant.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-school.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-secondary.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-service.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-shop.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-sport.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-sports-shop.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-stadium.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-stationery.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-taxi.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-tertiary.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-ticket.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-toilet.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-tools.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-townhall.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-travel.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-university.svg" />
+    <Content Include="PAPAssets\map\dist\assets\images\type-water-plant.svg" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-grid.css" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-grid.min.css" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-reboot.css" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap.css" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\css\bootstrap.min.css" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.bundle.js" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.js" />
+    <Content Include="PAPAssets\map\dist\assets\plugins\bootstrap-4.3.1-dist\js\bootstrap.min.js" />
+    <Content Include="PAPAssets\map\dist\css\en\style.css" />
+    <Content Include="PAPAssets\map\dist\css\fa\style.css" />
+    <Content Include="PAPAssets\map\dist\css\mapp.min.css" />
+    <Content Include="PAPAssets\map\dist\js\jquery-3.2.1.min.js" />
+    <Content Include="PAPAssets\map\dist\js\mapp.env.js" />
+    <Content Include="PAPAssets\map\dist\js\mapp.min.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="Student\Default.aspx" />
+    <Content Include="Student\LogOut.ascx" />
+    <Content Include="Update.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountDeactivated.aspx.cs">
+      <DependentUpon>AccountDeactivated.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountDeactivated.aspx.designer.cs">
+      <DependentUpon>AccountDeactivated.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Applications.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Paths.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Profile.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Roles.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_SchemaVersions.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Users.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_WebEvent_Events.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookDetail.aspx.cs">
+      <DependentUpon>BookDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookDetail.aspx.designer.cs">
+      <DependentUpon>BookDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Components.cs" />
+    <Compile Include="Classes\Hash2ID.cs" />
+    <Compile Include="Classes\CultureInfo.cs" />
+    <Compile Include="Classes\ReserveStatus.cs" />
+    <Compile Include="Classes\SiteConfig.cs" />
+    <Compile Include="Classes\smsClass.cs" />
+    <Compile Include="Classes\UserRole.cs" />
+    <Compile Include="Classes\UserStatus.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dash.aspx.cs">
+      <DependentUpon>Dash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dash.aspx.designer.cs">
+      <DependentUpon>Dash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Books.ascx.cs">
+      <DependentUpon>Books.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Books.ascx.designer.cs">
+      <DependentUpon>Books.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Categories.ascx.cs">
+      <DependentUpon>Categories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Categories.ascx.designer.cs">
+      <DependentUpon>Categories.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Dashboard.ascx.cs">
+      <DependentUpon>Dashboard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Dashboard.ascx.designer.cs">
+      <DependentUpon>Dashboard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Faqs.ascx.cs">
+      <DependentUpon>Faqs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Faqs.ascx.designer.cs">
+      <DependentUpon>Faqs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LoginReport.ascx.cs">
+      <DependentUpon>LoginReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\LoginReport.ascx.designer.cs">
+      <DependentUpon>LoginReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Manager.ascx.cs">
+      <DependentUpon>Manager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Manager.ascx.designer.cs">
+      <DependentUpon>Manager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Permission.ascx.cs">
+      <DependentUpon>Permission.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Permission.ascx.designer.cs">
+      <DependentUpon>Permission.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Profile.ascx.cs">
+      <DependentUpon>Profile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Profile.ascx.designer.cs">
+      <DependentUpon>Profile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Reservations.ascx.cs">
+      <DependentUpon>Reservations.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Reservations.ascx.designer.cs">
+      <DependentUpon>Reservations.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\ServerMonitor.ascx.cs">
+      <DependentUpon>ServerMonitor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\ServerMonitor.ascx.designer.cs">
+      <DependentUpon>ServerMonitor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Students.ascx.cs">
+      <DependentUpon>Students.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Students.ascx.designer.cs">
+      <DependentUpon>Students.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\SystemSettings.ascx.cs">
+      <DependentUpon>SystemSettings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\SystemSettings.ascx.designer.cs">
+      <DependentUpon>SystemSettings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PAPAssets\Pages\AccessDenied.ascx.cs">
+      <DependentUpon>AccessDenied.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PAPAssets\Pages\AccessDenied.ascx.designer.cs">
+      <DependentUpon>AccessDenied.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PAPAssets\Pages\CompileError.ascx.cs">
+      <DependentUpon>CompileError.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PAPAssets\Pages\CompileError.ascx.designer.cs">
+      <DependentUpon>CompileError.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PAPAssets\Pages\InClude.cs" />
+    <Compile Include="PAPAssets\Pages\NotFoundPage.ascx.cs">
+      <DependentUpon>NotFoundPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PAPAssets\Pages\NotFoundPage.ascx.designer.cs">
+      <DependentUpon>NotFoundPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="PAPMyDevice.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAPTbl_PermissionPages.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PAPTbl_PermissionUsers.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerCommand.aspx.cs">
+      <DependentUpon>ServerCommand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerCommand.aspx.designer.cs">
+      <DependentUpon>ServerCommand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Books.ascx.cs">
+      <DependentUpon>Books.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Books.ascx.designer.cs">
+      <DependentUpon>Books.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ChangePassword.ascx.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ChangePassword.ascx.designer.cs">
+      <DependentUpon>ChangePassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\LoginReport.ascx.cs">
+      <DependentUpon>LoginReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\LoginReport.ascx.designer.cs">
+      <DependentUpon>LoginReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\LogOut.ascx.cs">
+      <DependentUpon>LogOut.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\LogOut.ascx.designer.cs">
+      <DependentUpon>LogOut.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Profile.ascx.cs">
+      <DependentUpon>Profile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Profile.ascx.designer.cs">
+      <DependentUpon>Profile.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ULSTbl_Books.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ULSTbl_Categories.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ULSTbl_Faq.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ULSTbl_Reserve.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ULSTbl_SiteSetting.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ULSTbl_Users.cs">
+      <DependentUpon>MainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PAPAssets\vendor\vendor\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>29010</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:29010/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.10.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.4.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.4.1.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
