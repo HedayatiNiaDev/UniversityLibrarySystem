@@ -11,7 +11,7 @@ namespace Classes
     {
         private const string _siteName = "سامانه کتابخانه دانشگاه";
         private const string _devName = "امیر محمد هدایتی نیا";
-        private const string _devLink = "https://p-amol.nus.ac.ir/";
+        private const string _devLink = "https://github.com/hedayatiniadev";
 
         public static string getSiteName()
         {
