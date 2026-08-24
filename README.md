@@ -139,19 +139,11 @@ or the configured local web server.
 
 ## 🖥️ Screenshots
 
-### Login
-![Login](screenshots/login.png)
+### Home
+![Home](screenshots/home.png)
 
 ### Dashboard
 ![Dashboard](screenshots/dashboard.png)
-
-### Books
-![Books](screenshots/books.png)
-
-### Student Panel
-![Student Panel](screenshots/student.png)
-
-directory.
 
 ## 🔒 Security Note
 
