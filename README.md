@@ -1,319 +1,189 @@
-# 📚 سامانه مدیریت کتابخانه دانشگاه علامه حسن‌زاده آملی
+# University Library System
 
-## 📖 درباره پروژه
+A web-based university library management system built with **ASP.NET Web Forms** and **Entity Framework Database First**.
 
-این پروژه یک **سامانه تحت وب برای مدیریت کتابخانه دانشگاهی** است که با هدف دیجیتالی‌سازی و ساده‌سازی فرآیندهای مدیریت کتابخانه طراحی و پیاده‌سازی شده است.
+The system is designed to help universities manage books, categories, users, students, reservations, and library-related operations through a centralized web application.
 
-این سامانه امکاناتی مانند مدیریت کتاب‌ها، دسته‌بندی‌ها، کاربران، رزرو، امانت، تمدید، جریمه، گزارش‌گیری و مدیریت تنظیمات را در اختیار مدیران و دانشجویان قرار می‌دهد.
+## 📌 Features
 
----
+* 🔐 User authentication and registration
+* 👨‍🎓 Student management
+* 👨‍💼 Manager / administrator management
+* 📚 Book management
+* 🗂️ Book category management
+* 🔎 Book search
+* 📖 Book details
+* 📌 Book reservation
+* 👥 User management
+* 🖼️ Web-based interface
+* 🗄️ Database integration using Entity Framework
 
-## ✨ امکانات اصلی
+## 🛠️ Technologies
 
-### 👨‍💼 پنل مدیریت
+* **C#**
+* **ASP.NET Web Forms**
+* **.NET Framework**
+* **Entity Framework**
+* **SQL Server**
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **Bootstrap / Front-end libraries**
 
-* مشاهده آمار کلی سامانه
-* نمایش تعداد مدیران و دانشجویان
-* نمایش تعداد کتاب‌ها
-* نمایش کتاب‌های قابل رزرو
-* نمایش کتاب‌های امانت داده شده
-* نمایش کتاب‌های دارای جریمه
-* بروزرسانی خودکار داشبورد بدون نیاز به Refresh
-* مدیریت کاربران
-* مدیریت مدیران و سطح دسترسی آن‌ها
-* مدیریت کتاب‌ها
-* مدیریت دسته‌بندی کتاب‌ها
-* مدیریت رزروها
-* مدیریت وضعیت امانت و جریمه‌ها
-* گزارش‌گیری از فعالیت کاربران
-
-### 👨‍🎓 امکانات دانشجویان
-
-* مشاهده رزروهای فعال، لغوشده و در انتظار
-* جستجو بین رزروها
-* مشاهده وضعیت امانت کتاب‌ها
-* مشاهده وضعیت جریمه‌ها
-* مدیریت حساب کاربری
-* مشاهده گزارش ورودهای اخیر
-* خروج از سایر دستگاه‌های فعال
-
----
-
-## 📚 مدیریت کتاب‌ها
-
-امکانات بخش مدیریت کتاب شامل موارد زیر است:
-
-* افزودن کتاب
-* ویرایش اطلاعات کتاب
-* حذف کتاب
-* جستجو بر اساس عنوان
-* جستجو بر اساس ISBN
-* دسته‌بندی کتاب‌ها
-* مدیریت وضعیت کتاب
-* مدیریت تعداد و موجودی کتاب‌ها
-
----
-
-## 🔖 سیستم رزرو و امانت
-
-سامانه امکان مدیریت کامل فرآیند رزرو و امانت کتاب را فراهم می‌کند.
-
-### امکانات
-
-* رزرو کتاب
-* مدیریت وضعیت رزرو
-* لغو رزرو
-* مشاهده تاریخ شروع و پایان رزرو
-* ثبت اطلاعات امانت
-* تمدید کتاب
-* کنترل تاریخ بازگرداندن کتاب
-* ثبت خودکار جریمه در صورت تأخیر
-
----
-
-## 🤖 قابلیت‌های هوشمند
-
-برخی از فرآیندهای سامانه به صورت خودکار انجام می‌شوند:
-
-### بررسی خودکار رزروها
-
-سامانه هر ۲۴ ساعت رزروهای موقت را بررسی می‌کند و در صورتی که زمان رزرو به پایان رسیده باشد، رزرو به صورت خودکار حذف می‌شود.
-
-### کنترل وضعیت امانت‌ها
-
-سیستم به صورت روزانه وضعیت امانت کتاب‌ها را بررسی می‌کند.
-
-در صورتی که تاریخ بازگرداندن کتاب گذشته باشد:
-
-* وضعیت امانت به حالت جریمه تغییر می‌کند.
-* جریمه برای کاربر ثبت می‌شود.
-
-### مدیریت نشست‌ها
-
-کاربران می‌توانند از تمام نشست‌های فعال خود، به جز نشست فعلی، خارج شوند.
-
----
-
-## 🔐 امنیت
-
-برای مدیریت کاربران و امنیت سامانه از امکانات زیر استفاده شده است:
-
-* ASP.NET Membership
-* احراز هویت کاربران
-* ورود و خروج امن
-* مدیریت نقش‌ها
-* سطح‌بندی دسترسی
-* محدودسازی دسترسی به صفحات مدیریتی
-* ذخیره رمزهای عبور به صورت Hash
-* ثبت تاریخچه ورود و خروج کاربران
-* مدیریت نشست‌های فعال
-* پشتیبانی از HTTPS در نسخه عملیاتی
-
----
-
-## ⚙️ تنظیمات سامانه
-
-مدیر اصلی سیستم می‌تواند تنظیمات مختلف کتابخانه را مدیریت کند.
-
-### تنظیمات عمومی
-
-* نام سایت
-* شماره تلفن
-* آدرس
-* ایمیل
-* موقعیت روی نقشه
-* متن درباره ما
-
-### قوانین و محدودیت‌ها
-
-* تعداد روز مجاز برای امانت کتاب
-* حداکثر تعداد کتاب قابل امانت
-* تعداد دفعات تمدید مجاز
-* مبلغ جریمه تأخیر
-
-### وضعیت سامانه
-
-* باز یا بسته بودن سایت
-* فعال یا غیرفعال بودن رزرو موقت
-
----
-
-## 🛠️ تکنولوژی‌های استفاده‌شده
-
-### Backend
-
-* ASP.NET
-* C#
-
-### Database
-
-* Microsoft SQL Server
-
-### ORM
-
-* Entity Framework
-* LINQ
-* Code First
-
-### Authentication & Security
-
-* ASP.NET Membership
-
-### Frontend
-
-* HTML
-* CSS
-* JavaScript
-* Bootstrap
-* Ajax
-
-### Development Tools
-
-* Visual Studio
-* SQL Server Management Studio (SSMS)
-
----
-
-## 🗄️ ساختار پایگاه داده
-
-### جدول `Books`
-
-اطلاعات کتاب‌ها در این جدول ذخیره می‌شود.
-
-برخی از فیلدهای اصلی:
+## 🏗️ Project Structure
 
 ```text
-ID
-BookTitle
-AuthorName
-TranslatorName
-PublisherName
-ISBN
-CategoryId
-Status
-IsSpecial
-Available
-Count
-UserNameAdder
+UniversityLibrarySystem/
+│
+├── Classes/
+├── Fakes/
+├── Manager/
+├── Student/
+├── Properties/
+├── PAPAssets/
+│
+├── css/
+├── js/
+├── img/
+├── fonts/
+├── content/
+│
+├── MainModel.cs
+├── MainModel.Context.cs
+├── MainModel.edmx
+├── MainModel.tt
+│
+├── ULSTbl_Books.cs
+├── ULSTbl_Categories.cs
+├── ULSTbl_Reserve.cs
+├── ULSTbl_Users.cs
+│
+├── Global.asax
+├── Web.config
+├── packages.config
+└── UniversityLibrarySystem.csproj
 ```
 
-### جدول `Categories`
+## 🗄️ Database
 
-برای مدیریت دسته‌بندی کتاب‌ها استفاده می‌شود.
+The project uses **Entity Framework Database First**.
+
+The Entity Data Model is defined in:
 
 ```text
-ID
-Title
-PicName
-Status
-DateInsert
-UserNameAdder
+MainModel.edmx
 ```
 
-### جدول `Reservations`
+The generated entity and context classes are used to communicate with the SQL Server database.
 
-اطلاعات رزرو و امانت کتاب‌ها در این بخش نگهداری می‌شود.
+### Main entities
+
+* Users
+* Books
+* Categories
+* Reservations
+* Roles
+* Membership-related entities
+
+> The database connection settings are configured through `Web.config`.
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/HedayatiNiaDev/UniversityLibrarySystem.git
+```
+
+### 2. Open the solution
+
+Open:
 
 ```text
-ID
-UserName
-BookID
-CustomCode
-ReserveStartDate
-ReserveEndDate
-DeliveryDate
-StatusID
-Renewal
+UniversityLibrarySystem.sln
 ```
 
----
+using **Visual Studio**.
 
-## 🔗 روابط اصلی پایگاه داده
+### 3. Restore NuGet packages
+
+Restore the required NuGet packages from Visual Studio.
+
+### 4. Configure the database
+
+Update the database connection string in:
 
 ```text
-Categories
-    │
-    │ 1
-    ▼
-Books
-    │
-    │ 1
-    ▼
-Reservations
-    │
-    └── UserName ──► Users
+Web.config
 ```
 
-* هر کتاب به یک دسته‌بندی متصل است.
-* هر رزرو مربوط به یک کتاب است.
-* هر رزرو متعلق به یک کاربر است.
+Make sure SQL Server is available and the required database has been created.
 
----
+### 5. Build the project
 
-## 📊 داشبورد مدیریتی
+In Visual Studio:
 
-داشبورد سامانه اطلاعات مهم را به صورت لحظه‌ای نمایش می‌دهد:
+```text
+Build → Build Solution
+```
 
-* تعداد مدیران
-* تعداد دانشجویان
-* تعداد حساب‌های غیرفعال
-* تعداد کل کتاب‌ها
-* تعداد کتاب‌های قابل رزرو
-* تعداد کتاب‌های امانت داده شده
-* تعداد کتاب‌های دارای جریمه
+### 6. Run the application
 
-اطلاعات داشبورد به صورت خودکار و بدون نیاز به Refresh بروزرسانی می‌شوند.
+Start the project using:
 
----
+```text
+IIS Express
+```
 
-## 🚀 توسعه‌های آینده
+or the configured local web server.
 
-این پروژه با ساختاری قابل توسعه طراحی شده است و در آینده می‌توان امکانات زیر را به آن اضافه کرد:
+## 🖥️ Screenshots
 
-* 📱 سامانه پیامکی
-* 🔔 سیستم Notification
-* 📲 اپلیکیشن موبایل
-* 📈 گزارش‌های پیشرفته‌تر
-* 📧 سیستم اطلاع‌رسانی ایمیلی
-* 🤖 توسعه قابلیت‌های هوشمند سامانه
+### Login
+![Login](screenshots/login.png)
 
----
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-## 🎯 هدف پروژه
+### Books
+![Books](screenshots/books.png)
 
-هدف اصلی پروژه، ایجاد یک سیستم یکپارچه برای مدیریت فرآیندهای کتابخانه دانشگاهی و کاهش مشکلات سیستم‌های سنتی است.
+### Student Panel
+![Student Panel](screenshots/student.png)
 
-از مهم‌ترین اهداف پروژه می‌توان به موارد زیر اشاره کرد:
+directory.
 
-* دیجیتالی‌سازی فرآیند رزرو و امانت
-* کاهش خطاهای انسانی
-* مدیریت یکپارچه کتابخانه
-* افزایش امنیت کاربران
-* مدیریت کامل تنظیمات
-* ارائه آمار و گزارش‌های مدیریتی
-* ایجاد ساختاری قابل توسعه برای آینده
+## 🔒 Security Note
 
----
+Do not commit production database credentials, passwords, API keys, or other sensitive configuration values to the repository.
 
-## 📸 تصاویر پروژه
+For local development, configure sensitive values in your local environment or development configuration.
 
+## 📚 Project Type
 
-![Home](screenshots/home.png)
-![WebSettings](screenshots/dashboard.png)
+This project is based on:
 
+```text
+ASP.NET Web Forms
+.NET Framework
+Entity Framework Database First
+SQL Server
+```
 
----
-
-## 👨‍💻 توسعه‌دهنده
-
-**امیر محمد هدایتی نیا**
-
----
+It is **not an ASP.NET Core application**.
 
 ## 📄 License
 
-این پروژه برای اهداف آموزشی و دانشگاهی توسعه داده شده است.
+This project is licensed under the terms specified in `LICENSE.txt`.
 
----
+## 👨‍💻 Author
 
-⭐ اگر این پروژه برای شما مفید بود، خوشحال می‌شوم از آن حمایت کنید.
+**HedayatiNiaDev**
+
+GitHub:
+
+https://github.com/HedayatiNiaDev
+
+## ⭐ Support
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
