@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c2fc296df9143d4a38cda63080a5a85" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="7.5" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_Membership" Width="1.5" PointX="3" PointY="6.125" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_Paths" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="15.125" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="12.25" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_Profile" Width="1.5" PointX="7.5" PointY="8.25" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_Roles" Width="1.5" PointX="3" PointY="15.125" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_SchemaVersions" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_Users" Width="1.5" PointX="5.25" PointY="7.875" />
+        <EntityTypeShape EntityType="ULSDBModel.aspnet_WebEvent_Events" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ULSDBModel.PAPTbl_PermissionPages" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ULSDBModel.PAPTbl_PermissionUsers" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ULSDBModel.ULSTbl_Books" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ULSDBModel.ULSTbl_Categories" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ULSDBModel.ULSTbl_Faq" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ULSDBModel.ULSTbl_SiteSetting" Width="1.5" PointX="9.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ULSDBModel.ULSTbl_Users" Width="1.5" PointX="10.75" PointY="0.75" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Me__Appli__44FF419A" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Pa__Appli__76969D2E" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Ro__Appli__6383C8BA" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Us__Appli__34C8D9D1" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Me__UserI__45F365D3" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Pe__PathI__00200768" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Pe__PathI__7C4F7684" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Pe__UserI__01142BA1" />
+        <AssociationConnector Association="ULSDBModel.FK__aspnet_Pr__UserI__59FA5E80" />
+        <AssociationConnector Association="ULSDBModel.aspnet_UsersInRoles" />
+        <EntityTypeShape EntityType="ULSDBModel.ULSTbl_Reserve" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="ULSDBModel.PAPMyDevice" Width="1.5" PointX="9.375" PointY="11.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
