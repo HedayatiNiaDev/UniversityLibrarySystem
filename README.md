@@ -141,9 +141,10 @@ or the configured local web server.
 
 ### Home
 ![Home](screenshots/home.png)
-
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
+### Login
+![Login](screenshots/login.png)
+### Web Settings
+![Web Settings](screenshots/websettings.png)
 
 ## 🔒 Security Note
 
