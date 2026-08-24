@@ -173,9 +173,7 @@ This project is licensed under the terms specified in `LICENSE.txt`.
 
 **HedayatiNiaDev**
 
-GitHub:
-
-https://github.com/HedayatiNiaDev
+GitHub: [HedayatiNiaDev/UniversityLibrarySystem](https://github.com/HedayatiNiaDev/UniversityLibrarySystem)
 
 ## ⭐ Support
 
